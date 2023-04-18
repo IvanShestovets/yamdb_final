@@ -2,7 +2,7 @@
 REST API для сервиса YaMDb — базы отзывов о фильмах, книгах и музыке.
 
 ## Технологический стек
-![Django-app workflow](https://github.com/needred/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![Django-app workflow](https://github.com/IvanShestovets/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 
 
@@ -83,4 +83,3 @@ git add .
 git commit -m "..."
 git push
 ```
-запускается набор блоков команд jobs (см. файл yamdb_workflow.yaml), т.к. команда `git push` является триггером workflow проекта.

@@ -1,12 +1,10 @@
 '''Команда для заполнения данных в БД из CSV файлов.'''
-
 from csv import DictReader
 
-from django.db.utils import IntegrityError
 from django.core.management import BaseCommand
-from reviews.models import Title, Genre, Category, GenreTitle, Review, Comment
+from django.db.utils import IntegrityError
+from reviews.models import Category, Comment, Genre, GenreTitle, Review, Title
 from users.models import User
-
 
 ENCODING = 'utf-8'
 

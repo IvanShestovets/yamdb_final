@@ -1,33 +1,23 @@
-from django.db.models import Avg
-from django.shortcuts import get_object_or_404
+from api.v1.filters import TitleFilter
+from api.v1.mixins import CreateListDestroyViewSet
+from api.v1.permissions import (IsAdminOrReadOnly, IsAdminOrSuperUser,
+                                IsAuthorAdminModeratorOrReadOnly)
+from api.v1.serializers import (CategoriesSerializer, CommentSerializer,
+                                GenreSerializer, ReviewSerializer,
+                                TitlesCreateSerializer, TitlesViewSerializer,
+                                UserGetTokenSerializer, UserProfileSerializer,
+                                UserRegisterSerializer, UsersSerializer)
 from django.contrib.auth.tokens import default_token_generator
 from django.core.exceptions import PermissionDenied
 from django.core.mail import send_mail
-from rest_framework import status, viewsets, filters, permissions
-from rest_framework.decorators import api_view, action
-from rest_framework.response import Response
+from django.db.models import Avg
+from django.shortcuts import get_object_or_404
+from rest_framework import filters, permissions, status, viewsets
+from rest_framework.decorators import action, api_view
 from rest_framework.pagination import LimitOffsetPagination
+from rest_framework.response import Response
+from reviews.models import Category, Genre, Review, Title
 from users.models import User
-from reviews.models import Title, Category, Genre, Review
-from api.v1.mixins import CreateListDestroyViewSet
-from api.v1.serializers import (
-    UserRegisterSerializer,
-    UserGetTokenSerializer,
-    UserProfileSerializer,
-    UsersSerializer,
-    TitlesCreateSerializer,
-    TitlesViewSerializer,
-    ReviewSerializer,
-    CategoriesSerializer,
-    CommentSerializer,
-    GenreSerializer
-)
-from api.v1.permissions import (
-    IsAdminOrSuperUser,
-    IsAuthorAdminModeratorOrReadOnly,
-    IsAdminOrReadOnly
-)
-from api.v1.filters import TitleFilter
 
 
 @api_view(['POST'])

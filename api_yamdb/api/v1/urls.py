@@ -9,7 +9,6 @@ from api.v1.views import (
     ReviewViewSet,
     TitlesViewSet,
     UsersViewSet,
-    
 )
 
 

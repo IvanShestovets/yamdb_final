@@ -115,6 +115,7 @@ class UsersViewSet(viewsets.ModelViewSet):
                 serializer.errors,
                 status=status.HTTP_400_BAD_REQUEST
             )
+        return None
 
 
 class CategoriesViewSet(CreateListDestroyViewSet):

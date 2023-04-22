@@ -7,8 +7,7 @@ from django.core.mail import send_mail
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 from rest_framework_simplejwt.tokens import AccessToken
-
-from reviews.models import Category, Review, Title, Comment, Genre
+from reviews.models import Category, Comment, Genre, Review, Title 
 from users.models import User
 
 

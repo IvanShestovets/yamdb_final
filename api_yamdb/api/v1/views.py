@@ -7,7 +7,6 @@ from rest_framework import status, viewsets, filters, permissions
 from rest_framework.decorators import api_view, action
 from rest_framework.response import Response
 from rest_framework.pagination import LimitOffsetPagination
-
 from users.models import User
 from reviews.models import Title, Category, Genre, Review
 from api.v1.mixins import CreateListDestroyViewSet

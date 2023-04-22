@@ -1,15 +1,15 @@
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
-
 from api.v1.views import (
     sign_up,
     get_token,
-    UsersViewSet,
+    CommentViewSet,
     CategoriesViewSet,
+    GenreViewSet,
     ReviewViewSet,
     TitlesViewSet,
-    CommentViewSet,
-    GenreViewSet
+    UsersViewSet,
+    
 )
 
 

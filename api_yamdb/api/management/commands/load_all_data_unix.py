@@ -2,10 +2,11 @@
 
 from csv import DictReader
 
-from django.core.management import BaseCommand
 from django.db.utils import IntegrityError
-from reviews.models import Category, Comment, Genre, GenreTitle, Review, Title
+from django.core.management import BaseCommand
+from reviews.models import Title, Genre, Category, GenreTitle, Review, Comment
 from users.models import User
+
 
 ENCODING = 'utf-8'
 

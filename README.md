@@ -80,13 +80,6 @@ touch default.conf
 nano default.conf
 ```
 
-Выполните на сервере миграции и запуститк проект:
-```
-sudo docker-compose exec web python manage.py migrate
-sudo docker-compose exec web python manage.py createsuperuser
-sudo docker-compose exec web python manage.py collectstatic --no-input
-```
-
 В репозитории на Гитхабе добавьте данные в `Settings - Secrets - Actions secrets`:
 ```
 DOCKER_USERNAME - имя пользователя в DockerHub
@@ -104,6 +97,14 @@ DB_PORT - 5432
 TELEGRAM_TO - id своего телеграм-аккаунта (можно узнать у @userinfobot, команда /start)
 TELEGRAM_TOKEN - токен бота (получить токен можно у @BotFather, /token, имя бота)
 ```
+
+Выполните на сервере миграции и запустите проект:
+```
+sudo docker-compose exec web python manage.py migrate
+sudo docker-compose exec web python manage.py createsuperuser
+sudo docker-compose exec web python manage.py collectstatic --no-input
+```
+
 При внесении любых изменений в проект, выполните коммит и пуш.
 ```
 git add .

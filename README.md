@@ -3,10 +3,10 @@
 
 ![Django-app workflow](https://github.com/IvanShestovets/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
-Развёрнутый проект: 
-http://51.250.90.94/api/v1/ 
-http://51.250.90.94/admin/ 
-http://51.250.90.94/redoc/
+## Развёрнутый проект: 
+- http://51.250.90.94/api/v1/ 
+- http://51.250.90.94/admin/ 
+- http://51.250.90.94/redoc/
 
 Проект YaMDb собирает **отзывы** пользователей на **произведения**.
 Произведения делятся на **категории**, такие как "Книги", "Фильмы", "Музыка" и тд.

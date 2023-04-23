@@ -4,7 +4,10 @@ REST API для сервиса YaMDb — базы отзывов о фильма
 ## Технологический стек
 ![Django-app workflow](https://github.com/IvanShestovets/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
-Публичный IPv4: https://51.250.90.94/redoc
+Развёрнутый проект: 
+http://51.250.90.94/api/v1/ 
+http://51.250.90.94/admin/ 
+http://51.250.90.94/redoc/
 
 ## Workflow
 * tests - Проверка кода на соответствие стандарту PEP8 (с помощью пакета flake8) и запуск pytest. Дальнейшие шаги выполнятся только если push был в ветку master или main.
